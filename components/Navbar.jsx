@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '@/assets/images/logo-white.png';
 import profileDefault from '@/assets/images/profile.png';
+import { FaGoogle } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
@@ -56,13 +57,13 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link
-                  href='/properties.html'
+                  href='/properties'
                   className='text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
                 >
                   Properties
                 </Link>
                 <Link
-                  href='/add-property.html'
+                  href='/properties/add'
                   className='text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
                 >
                   Add Property
@@ -75,7 +76,7 @@ const Navbar = () => {
           <div className='hidden md:block md:ml-6'>
             <div className='flex items-center'>
               <button className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'>
-                <i className='fa-brands fa-google text-white mr-2'></i>
+                <FaGoogle className='text-white mr-2'></FaGoogle>
                 <span>Login or Register</span>
               </button>
             </div>
@@ -83,7 +84,7 @@ const Navbar = () => {
 
           {/* <!-- Right Side Menu (Logged In) --> */}
           <div className='absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0'>
-            <Link href='messages.html' className='relative group'>
+            <Link href='/messages' className='relative group'>
               <button
                 type='button'
                 className='relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
@@ -140,7 +141,7 @@ const Navbar = () => {
                 tabIndex='-1'
               >
                 <Link
-                  href='/profile.html'
+                  href='/profile'
                   className='block px-4 py-2 text-sm text-gray-700'
                   role='menuitem'
                   tabIndex='-1'
@@ -149,7 +150,7 @@ const Navbar = () => {
                   Your Profile
                 </Link>
                 <Link
-                  href='saved-properties.html'
+                  href='/properties/saved'
                   className='block px-4 py-2 text-sm text-gray-700'
                   role='menuitem'
                   tabIndex='-1'
@@ -157,15 +158,14 @@ const Navbar = () => {
                 >
                   Saved Properties
                 </Link>
-                <Link
-                  href='#'
+                <button
                   className='block px-4 py-2 text-sm text-gray-700'
                   role='menuitem'
                   tabIndex='-1'
                   id='user-menu-item-2'
                 >
                   Sign Out
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -176,19 +176,19 @@ const Navbar = () => {
       <div className='hidden' id='mobile-menu'>
         <div className='space-y-1 px-2 pb-3 pt-2'>
           <Link
-            href='/index.html'
+            href='/index'
             className='bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium'
           >
             Home
           </Link>
           <Link
-            href='/properties.html'
+            href='/properties'
             className='text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
           >
             Properties
           </Link>
           <Link
-            href='/add-property.html'
+            href='/properties/add'
             className='text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium'
           >
             Add Property
