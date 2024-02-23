@@ -1,11 +1,14 @@
 'use client';
 import { useState } from 'react';
+import [ usePathname ] from 'next/navigation';
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '@/assets/images/logo-white.png';
 import profileDefault from '@/assets/images/profile.png';
 import { FaGoogle } from 'react-icons/fa';
+import { usePathname } from 'next/navigation';
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -58,7 +61,7 @@ const Navbar = () => {
               <div className='flex space-x-2'>
                 <Link
                   href='/index.html'
-                  className='text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                  className='text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
                 >
                   Home
                 </Link>
