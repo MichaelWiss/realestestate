@@ -1,11 +1,12 @@
 import React from 'react'
 import Link from 'next/link';
+import Hero from '@/components/Hero';
 
 function HomePage() {
   return (
     <div>
-    <h1 className="text-3xl">Welcome</h1>
-    <Link href="/properties">Show Properties</Link>
+    <Hero/>
+    
     </div>
   )
 };
