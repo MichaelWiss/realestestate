@@ -8,13 +8,13 @@ const PropertyPage = () => {
       <h2 class="text-3xl font-bold text-blue-500 mb-6 text-center">
         Recent Properties
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-         { properties.map((property) => (
-          <div>{ property.name }</div>
-         ) )}
-      </div>
-      </div>
-      </section>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            { properties.map((property) => (
+              <div>{ property.name }</div>
+            ))}
+        </div>
+    </div>
+    </section>
     
     );
 };
