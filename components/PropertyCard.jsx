@@ -16,7 +16,7 @@ const PropertyCard = ({ property }) => {
     />
     <div className  ="p-4">
       <div className  ="text-left md:text-center lg:text-left mb-6">
-        <div className  ="text-gray-600">Apartment</div>
+        <div className  ="text-gray-600">{property.type}</div>
         <h3 className ="text-xl font-bold">Boston Commons Retreat</h3>
       </div>
       <h3
