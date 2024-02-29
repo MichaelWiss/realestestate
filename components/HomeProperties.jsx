@@ -1,6 +1,7 @@
 import React from 'react'
 import properties from '@/properties.json';
 import PropertyCard from '@/components/PropertyCard';
+import Link from 'next/link';
 
 
 const HomeProperties = () => {
@@ -9,6 +10,7 @@ const HomeProperties = () => {
         .slice(0, 3);
 
   return (
+    <>
     <section className="px-4 py-6">
       <div className="container-xl lg:container m-auto">
         <h2 className="text-3xl font-bold text-blue-500 mb-6 text-center">
@@ -20,10 +22,19 @@ const HomeProperties = () => {
             ) : recentProperties.map((property) => (
                 <PropertyCard key={property._id} property={ property } />
             )) }
-        </div>
-        </div>
-        </section>
-  )
-}
+         </div>
+       </div>
+    </section>
+
+    <section className="m-auto max-w-lg my-10 px-6">
+            <Link
+                href="./properties"
+                className="block bg-black text-white text-center py-4 px-6 rounded-xl hover:bg-gray-700"
+                >View All Properties
+                </Link>
+    </section>
+    </>
+  );
+};
 
 export default HomeProperties
