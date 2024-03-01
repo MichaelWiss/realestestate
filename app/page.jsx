@@ -3,6 +3,7 @@ import HomeProperties from '@/components/HomeProperties';
 import InfoBoxes from '@/components/InfoBoxes';
 
 function HomePage() {
+  
   return (
     <div>
     <Hero/>
