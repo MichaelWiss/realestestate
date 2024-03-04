@@ -49,6 +49,43 @@ const PropertySchema = new Schema({
         }
     ],
     rates: {
-        nightly: 
+        nightly: {
+            type: Number
+        },
+        weekly: {
+            type: Number
+        },
+         monthly: {
+            type: Number
+        },
+    },
+    seller_info: {
+        name: {
+            type: String
+        },
+         email: {
+            type: String
+        },
+         name: {
+            phone: String
+        }
+    },
+    images: [
+        {
+            type: String
+        }
+    ],
+    isFeatured: {
+        type: Boolean,
+        default: false
     }
+}, {
+    timestamps: true
 });
+
+const Property = models.Property || model('Property',
+PropertySchema);
+
+export default Property;
+
+
