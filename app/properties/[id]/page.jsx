@@ -192,7 +192,7 @@ const PropertyPage = () => {
             </div>
           </main>
 
-         //sidebar
+         {/* //sidebar */}
           <aside className="space-y-4">       
             <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold w-full py-2 px-4 rounded-full flex items-center justify-center"
@@ -205,7 +205,7 @@ const PropertyPage = () => {
               <i className="fas fa-share mr-2"></i> Share Property
             </button>
 
-            //contact form
+            {/* //contact form */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-6">Contact Property Manager</h3>
               <form>
