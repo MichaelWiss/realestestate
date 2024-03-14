@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import React from 'react'
 import '@/assets/styles/globals.css';
+import AuthProvider from '@/components/AuthProvider';
 export const metadata = { 
     title: 'RealestEstate | Find the Perfect Rental',
     description: 'Find your Dream property',
@@ -10,6 +11,7 @@ export const metadata = {
 
 const MainLayout = ({ children }) => {
   return (
+    <AuthProvider>
     <html lang='en'>
     <body>
         <Navbar />
@@ -17,6 +19,7 @@ const MainLayout = ({ children }) => {
         <Footer/>
     </body>
     </html>
+    </AuthProvider>
   )
 };
 
