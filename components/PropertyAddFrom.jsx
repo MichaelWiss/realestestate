@@ -1,7 +1,47 @@
-import React from 'react'
+'use client';
+
+import {useState, useEffect} from 'react';
 
 const PropertyAddFrom = () => {
-  return (
+
+    const [mounted, setMounted] = useState(false);
+    const [fields, setFields] = useState({
+        type: 'Apartment',
+        name: 'Test Property',
+        description: '',
+        location: {
+            street: '',
+            city: 'Test City',
+            state: 'Test State',
+            zipcode: '',
+        },
+        beds: '3',
+        baths: '2',
+        square_feet: '1800',
+        amenities: [],
+        rates: {
+            weekly: '',
+            monthly: '2000',
+            nightly: '',
+        },
+        seller_info: {
+            name: '',
+            email: 'test@test.com',
+            phone: '',
+        },
+        images: [],
+    });
+
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const handleChange = ()=> {}
+    const handleAmenitiesChange = ()=> {}
+    const handleImageChange = ()=> {}
+
+  return mounted &&
     <form>
             <h2 className="text-3xl text-center font-semibold mb-6">
               Add Property
@@ -18,6 +58,8 @@ const PropertyAddFrom = () => {
                 name="type"
                 className="border rounded w-full py-2 px-3"
                 required
+                value={fields.type}
+                onChange={handleChange}
               >
                 <option value="Apartment">Apartment</option>
                 <option value="Condo">Condo</option>
@@ -397,7 +439,7 @@ const PropertyAddFrom = () => {
               </button>
             </div>
           </form>
-  )
-}
+ 
+};
 
 export default PropertyAddFrom
