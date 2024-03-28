@@ -18,7 +18,7 @@ const PropertyAddFrom = () => {
         beds: '3',
         baths: '2',
         square_feet: '1800',
-        amenities: [],
+        amenities: ['Free Parking'],
         rates: {
             weekly: '',
             monthly: '2000',
@@ -146,7 +146,7 @@ const PropertyAddFrom = () => {
 
             <div className="mb-4 flex flex-wrap">
               <div className="w-full sm:w-1/3 pr-2">
-                <label for="beds" className="block text-gray-700 font-bold mb-2"
+                <label htmlFor="beds" className="block text-gray-700 font-bold mb-2"
                   >Beds</label
                 >
                 <input
@@ -160,7 +160,7 @@ const PropertyAddFrom = () => {
                 />
               </div>
               <div className="w-full sm:w-1/3 px-2">
-                <label for="baths" className="block text-gray-700 font-bold mb-2"
+                <label htmlFor="baths" className="block text-gray-700 font-bold mb-2"
                   >Baths</label
                 >
                 <input
@@ -175,7 +175,7 @@ const PropertyAddFrom = () => {
               </div>
               <div className="w-full sm:w-1/3 pl-2">
                 <label
-                  for="square_feet"
+                  htmlFor="square_feet"
                   className="block text-gray-700 font-bold mb-2"
                   >Square Feet</label
                 >
@@ -206,7 +206,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Wifi')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_wifi">Wifi</label>
+                  <label htmlFor="amenity_wifi">Wifi</label>
                 </div>
                 <div>
                   <input
@@ -218,7 +218,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Full Kitchen')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_kitchen">Full kitchen</label>
+                  <label htmlFor="amenity_kitchen">Full kitchen</label>
                 </div>
                 <div>
                   <input
@@ -230,7 +230,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Washer & Dryer')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_washer_dryer">Washer & Dryer</label>
+                  <label htmlFor="amenity_washer_dryer">Washer & Dryer</label>
                 </div>
                 <div>
                   <input
@@ -242,7 +242,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Free Parking')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_free_parking">Free Parking</label>
+                  <label htmlFor="amenity_free_parking">Free Parking</label>
                 </div>
                 <div>
                   <input
@@ -254,7 +254,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Swimming Pool')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_pool">Swimming Pool</label>
+                  <label htmlFor="amenity_pool">Swimming Pool</label>
                 </div>
                 <div>
                   <input
@@ -266,7 +266,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Hot Tub')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_hot_tub">Hot Tub</label>
+                  <label htmlFor="amenity_hot_tub">Hot Tub</label>
                 </div>
                 <div>
                   <input
@@ -278,7 +278,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('24/7 Security')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_24_7_security">24/7 Security</label>
+                  <label htmlFor="amenity_24_7_security">24/7 Security</label>
                 </div>
                 <div>
                   <input
@@ -290,7 +290,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Wheelchair Accessible')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_wheelchair_accessible"
+                  <label htmlFor="amenity_wheelchair_accessible"
                     >Wheelchair Accessible</label
                   >
                 </div>
@@ -304,7 +304,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Elevator Access')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_elevator_access">Elevator Access</label>
+                  <label htmlFor="amenity_elevator_access">Elevator Access</label>
                 </div>
                 <div>
                   <input
@@ -316,7 +316,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Dishwasher')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_dishwasher">Dishwasher</label>
+                  <label htmlFor="amenity_dishwasher">Dishwasher</label>
                 </div>
                 <div>
                   <input
@@ -328,7 +328,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Gym/Fitness Center')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_gym_fitness_center"
+                  <label htmlFor="amenity_gym_fitness_center"
                     >Gym/Fitness Center</label
                   >
                 </div>
@@ -342,7 +342,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Air Conditioning')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_air_conditioning">Air Conditioning</label>
+                  <label htmlFor="amenity_air_conditioning">Air Conditioning</label>
                 </div>
                 <div>
                   <input
@@ -354,7 +354,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Balcony/Patio')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_balcony_patio">Balcony/Patio</label>
+                  <label htmlFor="amenity_balcony_patio">Balcony/Patio</label>
                 </div>
                 <div>
                   <input
@@ -366,7 +366,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Smart TV')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_smart_tv">Smart TV</label>
+                  <label htmlFor="amenity_smart_tv">Smart TV</label>
                 </div>
                 <div>
                   <input
@@ -378,7 +378,7 @@ const PropertyAddFrom = () => {
                     checked={ fields.amenities.includes('Coffee Maker')}
                     onChange={handleAmenitiesChange}
                   />
-                  <label for="amenity_coffee_maker">Coffee Maker</label>
+                  <label htmlFor="amenity_coffee_maker">Coffee Maker</label>
                 </div>
               </div>
             </div>
@@ -391,7 +391,7 @@ const PropertyAddFrom = () => {
                 className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
               >
                 <div className="flex items-center">
-                  <label for="weekly_rate" className="mr-2">Weekly</label>
+                  <label htmlFor="weekly_rate" className="mr-2">Weekly</label>
                   <input
                     type="number"
                     id="weekly_rate"
@@ -402,7 +402,7 @@ const PropertyAddFrom = () => {
                   />
                 </div>
                 <div className="flex items-center">
-                  <label for="monthly_rate" className="mr-2">Monthly</label>
+                  <label htmlFor="monthly_rate" className="mr-2">Monthly</label>
                   <input
                     type="number"
                     id="monthly_rate"
@@ -413,7 +413,7 @@ const PropertyAddFrom = () => {
                   />
                 </div>
                 <div className="flex items-center">
-                  <label for="nightly_rate" className="mr-2">Nightly</label>
+                  <label htmlFor="nightly_rate" className="mr-2">Nightly</label>
                   <input
                     type="number"
                     id="nightly_rate"
@@ -477,7 +477,7 @@ const PropertyAddFrom = () => {
             </div>
 
             <div className="mb-4">
-              <label for="images" className="block text-gray-700 font-bold mb-2"
+              <label htmlFor="images" className="block text-gray-700 font-bold mb-2"
                 >Images (Select up to 4 images)</label
               >
               <input
