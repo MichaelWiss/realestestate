@@ -40,6 +40,8 @@ const PropertyAddFrom = () => {
     const handleChange = (e)=> {
       const { name, value }= e.target;
 
+      // check if nested property
+
       if (name.includes('.')) {
         const [outerKey, innerKey] = name.split('.');
         
@@ -58,7 +60,10 @@ const PropertyAddFrom = () => {
       }
     };
 
-    const handleAmenitiesChange = ()=> {}
+    const handleAmenitiesChange = (e)=> {
+      const { value, checked } = e.target;
+    };
+
     const handleImageChange = ()=> {}
 
   return mounted &&
