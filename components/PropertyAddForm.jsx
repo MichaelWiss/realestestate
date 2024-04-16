@@ -2,7 +2,7 @@
 
 import {useState, useEffect} from 'react';
 
-const PropertyAddFrom = () => {
+const PropertyAddForm = () => {
 
     const [mounted, setMounted] = useState(false);
     const [fields, setFields] = useState({
@@ -88,7 +88,18 @@ const PropertyAddFrom = () => {
     const handleImageChange = (e)=> {
       const { files } = e.target;
 
-      console.log(files);
+      // clone images array
+      const updatedImages = [...fields.images];
+
+      // add new files to array
+      for (const file of files) {
+        updatedImages.push(file);
+      }
+      // Update state with images
+      setFields((prevFields) => ({
+        ...prevFields,
+        images: updatedImages,
+      }));
     };
 
   return mounted &&
@@ -553,4 +564,4 @@ const PropertyAddFrom = () => {
  
 };
 
-export default PropertyAddFrom
+export default PropertyAddForm
