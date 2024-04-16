@@ -85,7 +85,11 @@ const PropertyAddFrom = () => {
 
     };
 
-    const handleImageChange = ()=> {}
+    const handleImageChange = (e)=> {
+      const { files } = e.target;
+
+      console.log(files);
+    };
 
   return mounted &&
     <form>
