@@ -17,3 +17,11 @@ export const GET = async (request, { params }) => {
         status: 500 });
    }
 };
+
+export const POST = async () => {
+    try {
+
+    } catch (error) {
+        
+    }
+}
