@@ -20,8 +20,9 @@ export const GET = async (request, { params }) => {
 
 export const POST = async () => {
     try {
-
+        return new Response(JSON.stringify({message: 'Success'}), 
+    { status: 200 });
     } catch (error) {
-        
+        return new Response('Failed to add property', { status: 500 });
     }
 }
