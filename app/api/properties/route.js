@@ -18,8 +18,10 @@ export const GET = async (request, { params }) => {
    }
 };
 
-export const POST = async () => {
+export const POST = async (request) => {
     try {
+        const formData = await request 
+        
         return new Response(JSON.stringify({message: 'Success'}), 
     { status: 200 });
     } catch (error) {
