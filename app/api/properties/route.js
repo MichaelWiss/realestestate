@@ -21,7 +21,10 @@ export const GET = async (request, { params }) => {
 export const POST = async (request) => {
     try {
         const formData = await request.formData();
-        console.log(formData.get('name')); 
+
+        // Access all values from amenities and images
+        const amenities = formData.gatAll('amenities');
+        const images = formData.gatAll('images').filter((image) => image.name !== '');
         
         return new Response(JSON.stringify({message: 'Success'}), 
     { status: 200,
