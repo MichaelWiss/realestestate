@@ -20,10 +20,12 @@ export const GET = async (request, { params }) => {
 
 export const POST = async (request) => {
     try {
-        const formData = await request 
+        const formData = await request.formData();
+        console.log(formData.get('name')); 
         
         return new Response(JSON.stringify({message: 'Success'}), 
-    { status: 200 });
+    { status: 200,
+     });
     } catch (error) {
         return new Response('Failed to add property', { status: 500 });
     }
