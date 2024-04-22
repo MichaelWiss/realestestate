@@ -1,6 +1,8 @@
 import connectDB from "@/config/database";
 import Property from '@/models/Property';
 import Email from "next-auth/providers/email";
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from "@/utils/authOptions";
 
 // GET /api/properties
 export const GET = async (request, { params }) => {
@@ -21,6 +23,8 @@ export const GET = async (request, { params }) => {
 
 export const POST = async (request) => {
     try {
+        connectDB();
+        
         const formData = await request.formData();
 
         // Access all values from amenities and images
