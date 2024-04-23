@@ -31,6 +31,8 @@ export const POST = async (request) => {
             return new Response('Unauthorized', {status: 401});
         }
 
+        const userId = session.user.id;
+
         const formData = await request.formData();
 
         // Access all values from amenities and images
@@ -62,7 +64,8 @@ export const POST = async (request) => {
                 email: formData.get('seller_info.email'),
                 phone: formData.get('seller_info.phone'),
             },
-            images
+            owner: userId,
+            images,
         };
         console.log(propertyData);
 
