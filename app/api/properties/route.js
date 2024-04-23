@@ -23,8 +23,14 @@ export const GET = async (request, { params }) => {
 
 export const POST = async (request) => {
     try {
-        connectDB();
-        
+        await connectDB();
+
+        const session = await getServerSession(authOptions);
+
+        if (!session) {
+            return new Response('Unauthorized', {status: 401});
+        }
+
         const formData = await request.formData();
 
         // Access all values from amenities and images
