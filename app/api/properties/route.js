@@ -1,8 +1,7 @@
 import connectDB from "@/config/database";
 import Property from '@/models/Property';
-import Email from "next-auth/providers/email";
-import { getServerSession } from 'next-auth/next';
-import { authOptions } from "@/utils/authOptions";
+
+
 
 // GET /api/properties
 export const GET = async (request, { params }) => {
