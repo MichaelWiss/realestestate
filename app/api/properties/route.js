@@ -1,5 +1,6 @@
 import connectDB from "@/config/database";
 import Property from '@/models/Property';
+import { getSessionUser } from "@/utils/getSessionUser";
 
 
 
@@ -24,13 +25,15 @@ export const POST = async (request) => {
     try {
         await connectDB();
 
-        const session = await getServerSession(authOptions);
+        const sessionUser = await getSessionUser();
 
-        if (!session) {
-            return new Response('Unauthorized', {status: 401});
+        if (!session || ! sessionUser.userId) {
+            return new Response('User Id is required', { status: 401
+            });
+
         }
-
-        const userId = session.user.id;
+        const { userId } = sessionUser;
+        
 
         const formData = await request.formData();
 
