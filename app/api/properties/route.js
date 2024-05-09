@@ -105,6 +105,7 @@ export const POST = async (request) => {
     // { status: 200,
     // });
     } catch (error) {
+        console.error("This is the error we are looking for: ", error);
         return new Response('Failed to add property', { status: 500 });
     }
 }
