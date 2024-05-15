@@ -84,10 +84,11 @@ export const POST = async (request) => {
             //make request to upload to cloudinary
             const result = await cloudinary.uploader.upload(
                 `data:image/png;base64,${imageBase64}`, {
-                    folder: 'propertypulse'
+                    folder: 'propertypulse',
                 }
             );
             imageUploadPromises.push(result.secure_url);
+            
             //wait for all images to upload
             const uploadedImages = await Promise.all(imageUploadPromises);
             //add uploaded images to the propertyData object
