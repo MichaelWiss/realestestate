@@ -18,7 +18,7 @@ const PropertyCard = ({ property }) => {
     }
 
   return (
-    <div className="bg-white rounded-xl shadow-md relative">
+    <div className="rounded-xl shadow-md relative">
     <Image
       src={property.images[0]}
       alt=''
@@ -79,7 +79,7 @@ const PropertyCard = ({ property }) => {
       </div>
     </div>
   </div>
-  )
-}
+  );
+};
 
 export default PropertyCard;
