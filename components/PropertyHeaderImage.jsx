@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 
 
-function PropertyHeaderImage( { image }) {
+function PropertyHeaderImage({ image }) {
   return (
   <section>
   <div className="container-xl m-auto">
@@ -20,6 +20,6 @@ function PropertyHeaderImage( { image }) {
   </div>
 </section>
 );
-}
+};
 
 export default PropertyHeaderImage;
