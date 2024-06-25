@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 
 
-function PropertyHeaderImage({ image }) {
+const PropertyHeaderImage = ({ image }) => {
   return (
   <section>
   <div className="container-xl m-auto">
